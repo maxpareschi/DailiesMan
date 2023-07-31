@@ -7,12 +7,12 @@ Generate dailies for VFX using OIIO!
 - [x] Reposition Processor
 - [x] ColorTransform Processor
 - [x] Burnins Processor
-- [] Slate Processor (still not ported from Slater)
-- [] Settings and presets from json
-- [] Commandline parser
+- [ ] Slate Processor (still not ported from Slater)
+- [ ] Settings and presets from json
+- [ ] Commandline parser
 - [x] Type Hints
-- [] Docstrings
-- [] QT gui (low priority)
+- [ ] Docstrings
+- [ ] QT gui (low priority)
 
 ## Instructions
 
