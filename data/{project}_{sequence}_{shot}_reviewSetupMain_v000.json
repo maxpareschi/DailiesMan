@@ -1,0 +1,40 @@
+[
+    {
+        "class": "OCIOCDLTransform",
+        "cccid": "",
+        "direction": null,
+        "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/ATH301_013_010.cc",
+        "working_space": "data",
+        "subTrackIndex": 1
+    },
+    {
+        "class": "OCIOFileTransform",
+        "cccid": "",
+        "direction": null,
+        "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/Linear_to_LogC4.spi1d",
+        "working_space": "reference",
+        "subTrackIndex": 0
+    },
+    {
+        "class": "OCIOFileTransform",
+        "cccid": "",
+        "direction": null,
+        "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/Athena_S3_Rec709.cube",
+        "working_space": "data",
+        "subTrackIndex": 2
+    },
+    {
+        "class": "Transform",
+        "center": [
+            2304.0,
+            1582.0
+        ],
+        "rotate": 0.0,
+        "scale": 1.2,
+        "translate": [
+            0.0,
+            0.0
+        ],
+        "subTrackIndex": 3
+    }
+]

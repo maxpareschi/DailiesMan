@@ -1,0 +1,123 @@
+{
+    "burnin_presets": {
+        "profile_01": {
+            "font": "bahnschrift",
+            "text_color": "1,1,1",
+            "bg_color": "0,0,0,0",
+            "text_size": 50,
+            "text_padding": 5,
+            "margin_x": 10,
+            "margin_y": 10,
+            "text": {
+                "top_left": "",
+                "top_center": "",
+                "top_right": "",
+                "bottom_left": "",
+                "bottom_center": "",
+                "bottom_right": ""
+            }
+        }
+    },
+    "compression_presets": {
+        "dnxhd36": {
+            "extension": "mov",
+            "input_args": [
+                "-apply_trc bt709"
+            ],
+            "output_args": [
+                "-c:v dnxhd",
+                "-b:v 36M",
+                "-pix_fmt yuv422p"
+            ]
+        },
+        "prores444": {
+            "extension": "mov",
+            "input_args": [
+                "-apply_trc bt709"
+            ],
+            "output_args": [
+                "-c:v prores_ks",
+                "-profile:v 4",
+                "-vendor apl0",
+                "-bits_per_mb 8000",
+                "-pix_fmt yuva444p10le"
+            ]
+        },
+        "h264": {
+            "extension": "mp4",
+            "input_args": [
+                "-apply_trc bt709"
+            ],
+            "output_args": [
+                "-c:v libx264",
+                "-crf 18",
+                "-preset slow",
+                "-tune grain"
+            ]
+        }
+    },
+    "resolution_presets": {
+        "HD": {
+            "width": 1920,
+            "height": 1080,
+            "fillmode": "width",
+            "pixel_aspect": 1.0
+        },
+        "UHD": {
+            "width": 3840,
+            "height": 2160,
+            "fillmode": "width",
+            "pixel_aspect": 1.0
+        }
+    },
+    "letterbox_presets": {
+        "2.39": {
+            "bg_color": "0,0,0,1",
+            "aspect": 2.39,
+            "line_width": 0,
+            "line_color": "0,0,0,0"
+        },
+        "2.35": {
+            "bg_color": "0,0,0,1",
+            "aspect": 2.35,
+            "line_width": 0,
+            "line_color": "0,0,0,0"
+        },
+        "2": {
+            "bg_color": "0,0,0,1",
+            "aspect": 2,
+            "line_width": 0,
+            "line_color": "0,0,0,0"
+        },
+        "1.85": {
+            "bg_color": "0,0,0,1",
+            "aspect": 1.85,
+            "line_width": 1,
+            "line_color": "1,1,1,1"
+        }
+    },
+    "slate_presets": {
+        "base_slate": {
+            "template_path": "",
+            "resources_path": ""
+        }
+    },
+    "review_profiles": {
+        "dnxhd": {
+            "tags": ["lut"],
+            "burnin_preset": "profile_01",
+            "compression_preset": "dnxhd",
+            "resolution_preset": "HD",
+            "letterbox_preset": "2.39",
+            "slate_preset": "base_slate"
+        },
+        "h264": {
+            "tags": ["lut", "xform", "slate", "burnin"],
+            "burnin_preset": "profile_01",
+            "compression_preset": "h264",
+            "resolution_preset": "HD",
+            "letterbox_preset": "2",
+            "slate_preset": "base_slate"
+        }
+    }
+}
