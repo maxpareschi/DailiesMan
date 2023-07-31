@@ -2,17 +2,29 @@
 
 Generate dailies for VFX using OIIO!
 
+**DISCLAIMER**
+This is still a wip, and it's currently missing a lot of functionality.
+Use at your own risk!
+
 ### Features (Planned and Done)
 
 - [x] Reposition Processor
 - [x] ColorTransform Processor
 - [x] Burnins Processor
 - [ ] Slate Processor (still not ported from Slater)
+- [ ] FFMPEG final compression ro format
 - [ ] Settings and presets from json
 - [ ] Commandline parser
+- [ ] QT gui (low priority)
+
+### Dev Features
+
 - [x] Type Hints
 - [ ] Docstrings
-- [ ] QT gui (low priority)
+- [ ] Documentation
+- [ ] Tests (probably will never happen)
+
+---
 
 ## Instructions
 
