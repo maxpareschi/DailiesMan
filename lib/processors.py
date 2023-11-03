@@ -1,14 +1,27 @@
+from __future__ import annotations
+
 import os
 import re
 import math
+import json
 import PyOpenColorIO as OCIO
 
 from .base import DMBaseClass
 from .operators import (
+    EffectFileData,
     BurninsTextData,
     BurninsPresetData,
     RepoTransformData
 )
+
+
+class EffectsFileProcessor(DMBaseClass):
+
+    def __init__(self, **kwargs) -> None:
+        self.input_file: str = ""
+        # self.search_values: 
+        self.operations: EffectFileData = EffectFileData()
+        super().__init__(**kwargs)
 
 
 class BurninsProcessor(DMBaseClass):

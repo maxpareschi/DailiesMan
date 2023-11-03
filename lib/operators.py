@@ -1,4 +1,11 @@
+from __future__ import annotations
+
 from .base import DMBaseClass
+
+
+
+class EffectFileData(DMBaseClass):
+    pass
 
 
 class RepoTransformData(DMBaseClass):
@@ -90,7 +97,7 @@ class LetterboxPresetData(DMBaseClass):
 class SlatePresetData(DMBaseClass):
     def __init__(self, **kwargs):
         self.name: str = "default_slate"
-        self.template_path: str = "",
+        self.template_path: str = ""
         self.resources_path: str = ""
         super().__init__(**kwargs)
 
