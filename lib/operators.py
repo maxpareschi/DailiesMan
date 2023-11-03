@@ -5,7 +5,14 @@ from .base import DMBaseClass
 
 
 class EffectFileData(DMBaseClass):
-    pass
+    def __init__(self, **kwargs) -> None:
+        self.type: str = ""
+        self.cccid: str = ""
+        self.direction: int = 0
+        self.file: str = None
+        self.working_space: str = "data"
+        self.subTrackIndex: int = 0
+        super().__init__(**kwargs)
 
 
 class RepoTransformData(DMBaseClass):
@@ -19,7 +26,7 @@ class RepoTransformData(DMBaseClass):
 
 class ColorFileTransformData(DMBaseClass):
     def __init__(self, **kwargs) -> None:
-        self.src: str = ""
+        self.src: str = None
         self.cccId: str = "0"
         self.direction: int = 0
         super().__init__(**kwargs)
@@ -31,6 +38,13 @@ class ColorDisplayViewTransformData(DMBaseClass):
         self.display: str = "ACES"
         self.view: str = "Rec.709"
         self.direction: int = 0
+        super().__init__(**kwargs)
+
+
+class ColorColorSpaceTransformData(DMBaseClass):
+    def __init__(self, **kwargs) -> None:
+        self.in_colorspace: str = ""
+        self.out_colorspace: str = ""
         super().__init__(**kwargs)
 
 

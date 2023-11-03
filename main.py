@@ -10,11 +10,11 @@ if __name__ == "__main__":
 
     os.environ["OCIO"] = "D:/DEV/dailiesman/vendor/ocioconfig/OpenColorIOConfigs/aces_1.2/config.ocio"
 
-    effect = "D:/DEV/DailiesMan/data/reviewSetupMain.json"
+    effect = "D:/DEV/DailiesMan/data/reviewSetupMain_v000.json"
 
-    ctp = dmp.ColorTransformProcessor()
+    ctp = dmp.EffectsFileProcessor()
 
-    ctp.read_from_file(effect)
+    ctp.load(effect)
 
     # rtp = dmp.RepoTransformProcessor()
     # rtp.add_transform(

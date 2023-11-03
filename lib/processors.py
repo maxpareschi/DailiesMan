@@ -4,6 +4,7 @@ import os
 import re
 import math
 import json
+
 import PyOpenColorIO as OCIO
 
 from .base import DMBaseClass
@@ -18,10 +19,21 @@ from .operators import (
 class EffectsFileProcessor(DMBaseClass):
 
     def __init__(self, **kwargs) -> None:
-        self.input_file: str = ""
+        self.input_file: str = None
         # self.search_values: 
-        self.operations: EffectFileData = EffectFileData()
+        self.operations: list[EffectFileData] = list()
         super().__init__(**kwargs)
+
+    def load(self, file: str = None) -> None:
+        if file:
+            self.input_file = file
+        if self.input_file:
+            with open(self.input_file, "r") as f:
+                data = json.load(f)
+                print(json.dumps(data, indent=4, default=str))
+                print(data)
+        else:
+            print("NO FILE!")
 
 
 class BurninsProcessor(DMBaseClass):

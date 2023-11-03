@@ -1,6 +1,6 @@
 [
     {
-        "class": "OCIOCDLTransform",
+        "type": "OCIOCDLTransform",
         "cccid": "",
         "direction": null,
         "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/ATH301_013_010.cc",
@@ -8,7 +8,7 @@
         "subTrackIndex": 1
     },
     {
-        "class": "OCIOFileTransform",
+        "type": "OCIOFileTransform",
         "cccid": "",
         "direction": null,
         "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/Linear_to_LogC4.spi1d",
@@ -16,7 +16,7 @@
         "subTrackIndex": 0
     },
     {
-        "class": "OCIOFileTransform",
+        "type": "OCIOFileTransform",
         "cccid": "",
         "direction": null,
         "file": "D:/DEV/dailiesman/resources/test02/reviewSetup/reviewSetupMain/v000/resources/Athena_S3_Rec709.cube",
@@ -24,7 +24,7 @@
         "subTrackIndex": 2
     },
     {
-        "class": "Transform",
+        "type": "Transform",
         "center": [
             2304.0,
             1582.0
